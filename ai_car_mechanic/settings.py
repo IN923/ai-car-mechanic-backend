@@ -139,6 +139,10 @@ MAILERS = {
 #  "http://127.0.0.1:5173",
 # ]
 
+ALLOWED_HOSTS = [
+    'ai-car-mechanic.onrender.com',
+]
+
 CORS_ALLOWED_ORIGINS = [
     "https://ai-mechanic-frontend-ochre.vercel.app/"
 ]
@@ -154,4 +158,5 @@ MEDIA_ROOT = f'{BASE_DIR}/media'
 CORS_ALLOW_ALL_ORIGINS = True
 
 GEMINI_API_KEY = env('GEMINI_API_KEY')
+
 
