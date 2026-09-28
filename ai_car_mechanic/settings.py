@@ -27,7 +27,7 @@ environ.Env.read_env(os.path.join(BASE_DIR,'.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -142,6 +142,14 @@ MAILERS = {
 CORS_ALLOWED_ORIGINS = [
     "https://ai-mechanic-frontend-ochre.vercel.app/"
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = f'{BASE_DIR}/media'
+
+# CSRF_TRUSTED_ORIGINS = [
+#     'http://localhost:5173',      # Vite dev server
+#     'http://127.0.0.1:5173',      # same, IPv4 form
+# ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
